@@ -201,10 +201,12 @@ nav i{
     width: 200px;
     border-radius: 4px;
     border: none;
+    padding: 5px;
 }
 #message-form{
     width: 300px;
     border-radius: 5px;
+    padding: 5px;
 }
 #btn-form{
     color: white;
@@ -221,6 +223,28 @@ nav i{
 #btn-form:active{
     background: linear-gradient(to left, rgb(82, 80, 80), black);
 }
+/*-----------------------------footer----------------------------*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-size: 0.9rem;
+    background: linear-gradient(to right, rgb(16, 16, 16), white);
+}
+/*----------------------------styling for smaller screens--------------------------------*/
+
+@media screen and (max-width: 600px){
+    .header-text{
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
 @keyframes relocate{
     to{
         transform: skew(15deg, 15deg);

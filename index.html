@@ -19,7 +19,9 @@
                     <li><i class="fa-solid fa-truck"></i><a href="#">Services</a></li>
                     <li><i class="fa-solid fa-user"></i><a href="#">Portfolio</a></li>
                     <li><i class="fa-solid fa-address-book"></i><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark"></i>
                 </ul>
+                <i class="fa-solid fa-bars"></i>
             </nav>
             <div class="header-text">
                 <p>Web Designer</p><br>
@@ -120,7 +122,15 @@
         </div>
     </div>
 </div>
-
+<div class="footer">
+    <footer>
+        <hr>
+          <p>&copy; <span id="year-footer"></span> Autor: Belal Rahimi<br>All rights reserved.</p>        
+        <script>
+            document.getElementById("year-footer").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</div>
 
     <script src="index.js"></script>
 </body>
