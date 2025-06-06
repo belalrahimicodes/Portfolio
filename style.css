@@ -7,6 +7,10 @@
 body{
     background: linear-gradient(to right, silver, white);
 }
+html {
+  scroll-behavior: smooth;
+}
+
 /*------------------header---------------------*/
 .header{
     width: 100%;
@@ -37,7 +41,7 @@ nav ul a::after{
     bottom: -5px;
     width: 0;
     height: 5px;
-    background: linear-gradient(to right, silver, white);
+    background: linear-gradient(to right, white, rgb(92, 91, 91));
     transition: 0.7s;
 }
 nav ul li{
@@ -80,6 +84,7 @@ nav i{
     border-radius: 10px;
     padding: 10px 15px;
 }
+
 /*-----------------------------about------------------------*/
 .about img{
     width: 300px;
@@ -142,6 +147,7 @@ nav i{
     transform: rotate(20deg);
     background: linear-gradient(to left, white, lightblue);
 }
+
 /*-------------------------------portfolio-----------------------------*/
 .portfolio{
     padding: 40px 10px;
@@ -156,6 +162,7 @@ nav i{
     border-radius: 10px;
     font-size: 1.2rem;
 }
+
 /*---------------------------------Contact----------------------------------*/
 .contact{
     padding: 40px 10px;
@@ -223,6 +230,7 @@ nav i{
 #btn-form:active{
     background: linear-gradient(to left, rgb(82, 80, 80), black);
 }
+
 /*-----------------------------footer----------------------------*/
 .footer{
     display: flex;
@@ -234,15 +242,37 @@ nav i{
     font-size: 0.9rem;
     background: linear-gradient(to right, rgb(16, 16, 16), white);
 }
-/*----------------------------styling for smaller screens--------------------------------*/
 
-@media screen and (max-width: 600px){
-    .header-text{
-        font-size: 0.8rem;
-    }
+/*----------------------------styling for smaller screens--------------------------------*/
+nav .fa-solid.fa-bars{
+    display: none;
+}
+nav .fa-solid.fa-square-xmark{
+    display: none;
+}
+nav .fa-solid.fa-bars{
+    position: absolute;
+    cursor: pointer;
+    top: 45px;
+    right: 60px;
+    font-size: 2rem;
 }
 
-
+@media only screen and (max-width: 600px){
+    .header-text{
+        font-size: 0.8rem;
+        margin-inline-end: 50%;
+    }
+    nav ul{
+        display: none;
+    }
+    nav .fa-solid.fa-bars{
+    display: block;
+    }
+    nav .fa-solid.fa-square-xmark{
+    display: block;
+    }
+}
 
 
 @keyframes relocate{
