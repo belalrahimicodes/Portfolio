@@ -86,6 +86,20 @@ nav i{
     padding: 10px 15px;
     background: linear-gradient(to right, rgb(255, 255, 255), rgb(223, 223, 223));
 }
+nav .fa-solid.fa-bars{
+    display: none;
+}
+nav .fa-solid.fa-square-xmark{
+    display: none;
+}
+nav .fa-solid.fa-bars{
+    position: absolute;
+    cursor: pointer;
+    top: 45px;
+    right: 60px;
+    font-size: 2rem;
+}
+
 
 /*-----------------------------about------------------------*/
 .about img{
@@ -247,20 +261,6 @@ nav i{
     background: linear-gradient(to right, rgb(16, 16, 16), white);
 }
 
-/*----------------------------styling for smaller screens--------------------------------*/
-nav .fa-solid.fa-bars{
-    display: none;
-}
-nav .fa-solid.fa-square-xmark{
-    display: none;
-}
-nav .fa-solid.fa-bars{
-    position: absolute;
-    cursor: pointer;
-    top: 45px;
-    right: 60px;
-    font-size: 2rem;
-}
 /*-----------------------scroll to top----------------------*/
 #scroll-btn{
     color: white;
@@ -283,16 +283,31 @@ nav .fa-solid.fa-bars{
     background: linear-gradient(to left, rgb(94, 89, 89), rgb(255, 58, 58));
 }
 
+/*----------------------------styling for smaller screens--------------------------------*/
 @media only screen and (max-width: 600px){
     .header-text{
-        font-size: 0.rem;
+        font-size: 1.2rem;
         margin-inline-end: 50%;
+        margin-top: 40%;
     }
     .header-text h2{
-        font-size: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .header{
+        background-position: calc(100% - 20px) calc(100% - 200px);
     }
     nav ul{
         display: none;
+        background: linear-gradient(to right, rgb(255, 255, 255), rgb(148, 148, 148));
+        width: 200px;
+        overflow: hidden;
+        border-radius: 55px;
+        position: fixed;
+        top: 0;
+        right: 30px;
+        margin-top: 20%;
+        height: 30vh;
+        padding: 5px;
     }
     nav .fa-solid.fa-bars{
     display: block;
@@ -300,15 +315,21 @@ nav .fa-solid.fa-bars{
     nav .fa-solid.fa-square-xmark{
     display: block;
     }
-    .about{
-        margin-top:-100px;
-    }
     nav ul li{
         margin-inline-end: -30px;
     }
+    .about{
+        margin-top:-100px;
+    }
+    .services-list{
+        display: block;
+    }
+    .about-description h1{
+        margin-left: 25px;
+    }
 }
 
-
+/*----------------------------Animations--------------------------------*/
 @keyframes relocate{
     to{
         transform: skew(15deg, 15deg);

@@ -31,12 +31,6 @@ function openNav(){
     if (window.innerWidth <= 600) {
     openNavBton.style.display = "none";
     navbarList.style.display = "grid";
-    navbarList.style.position = "fixed";
-    navbarList.style.top = "0";
-    navbarList.style.right = "30px";
-    navbarList.style.marginTop = "10%";
-    navbarList.style.height = "100vh";
-    navbarList.style.padding = "50px"; 
     closeNavBtn.style.position = "fixed";
     closeNavBtn.style.cursor = "pointer";
     closeNavBtn.style.top = "45px";
@@ -77,3 +71,12 @@ function successMessage() {
   formSuccessMsg.style.display = "block";
   requestForm.reset();
 }
+
+const aboutDescription = document.getElementById("text-about");
+// Changes the text content for smaller screens
+function makeTextSmalller(){
+  if(window.innerWidth <= 600){
+    aboutDescription.textContent = " Hey! I’m a frontend developer, which basically means I make the internet look good. I turn coffee into code, pixels into pages, and bugs into... well, more coffee.";
+  }
+}
+makeTextSmalller();
