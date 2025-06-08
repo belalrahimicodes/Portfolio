@@ -2,6 +2,25 @@
 const yearFooter = document.getElementById("year-footer"); 
 yearFooter.textContent = new Date().getFullYear();
 
+// Getting the button from the DOM
+const scrollBtn = document.getElementById("scroll-btn");
+// Displays the button when 150px is scrolled down from the top of the page
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 150) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+// Scrolls to the top of the page smoothly
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+
 // Getting the navigation list and buttons from the DOM
 const navbarList = document.getElementById("navbar-list");
 const closeNavBtn = document.getElementById("close-nav-btn");
