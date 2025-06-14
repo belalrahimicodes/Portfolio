@@ -180,6 +180,37 @@ nav .fa-solid.fa-bars{
     border-radius: 10px;
     font-size: 1.2rem;
 }
+.my-projects a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px auto;
+    width: 250px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(205, 205, 205), rgb(51, 50, 50));
+}
+.my-projects a:hover{
+    animation-name: lessShrink;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.my-projects p{
+    margin-bottom: 20px;
+}
+.my-projects h3{
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+.my-projects img{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 15px;
+    margin-left: 10px;
+    box-shadow: 4px 8px 10px;
+}
 
 /*---------------------------------Contact----------------------------------*/
 .contact{
@@ -326,6 +357,9 @@ nav .fa-solid.fa-bars{
     }
     .about-description h1{
         margin-left: 25px;
+    }
+    .my-projects a{
+    font-size: 12px;
     }
 }
 
