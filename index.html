@@ -123,15 +123,15 @@
             <a target="_blank" href="https://www.linkedin.com/in/belalrahimi/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <div class="contact-form">
-            <form id="request-form">
+            <form id="request-form" name="submit-to-google-sheet">
                 <label for="name-input">Full Name:</label>
-                <input type="text" id="name-input" placeholder="Alex Schmidt" required>
+                <input type="text" id="name-input" name="Name" placeholder="Alex Schmidt" required>
                 <label for="tel-input">Swiss Phone Number:</label>
-                <input type="tel" id="tel-input" placeholder="+41 79 123 45 67" pattern="^\+41\s?\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$">
+                <input type="tel" id="tel-input" name="PhoneNumber" placeholder="+41 79 123 45 67" pattern="^\+41\s?\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$">
                 <label for="email-form">E-mail:</label>
-                <input type="email" id="email-form" placeholder="alexschmidt@gmail.com" required>
+                <input type="email" id="email-form" name="Email" placeholder="alexschmidt@gmail.com" required>
                 <textarea name="Request" rows="7" id="message-form" placeholder="You can type in your message here"></textarea>
-                <button id="btn-form" type="submit" onclick="successMessage()">Submit</button>
+                <button id="btn-form" type="submit">Submit</button>
             </form>
             <p id="form-success-msg" style="display: none;">Thank you for your message! I will get back to you as soon as possible.</p>
         </div>

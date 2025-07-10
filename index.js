@@ -57,20 +57,28 @@ document.querySelectorAll('#navbar-list a').forEach(link => {
   link.addEventListener('click', closeNav);
 });
 
-// Getting the form and the message from the DOM
-const formSuccessMsg = document.getElementById("form-success-msg");
-const requestForm = document.getElementById("request-form");
+// Sends the data from my website's contact form to my google sheet 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzccJKBiXxI-yFXMRsA12Raao39j_-5D735bHrOkkipXS_tql9yqtUaiLekOhjxvBey/exec';
+  const formSuccessMsg = document.getElementById("form-success-msg");
+  const requestForm = document.getElementById("request-form");
 
-// Adding an event listener to prevent page reload and call the successMessage function
-requestForm.addEventListener("submit", event => {
-  event.preventDefault();  // Prevent page reload
-  successMessage();
-});
-// Displays the message and resets the form when the submit button is clicked
-function successMessage() {
-  formSuccessMsg.style.display = "block";
-  requestForm.reset();
-}
+  requestForm.addEventListener("submit", event => {
+    event.preventDefault(); // Prevent form from reloading the page
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(requestForm)
+    })
+    .then(response => {
+      console.log('Success!', response);
+      formSuccessMsg.style.display = "block"; // Show success message
+      requestForm.reset();                    // Reset the form
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      alert("There was a problem submitting your form. Please try again.");
+    });
+  });
 
 const aboutDescription = document.getElementById("text-about");
 // Changes the text content for smaller screens
