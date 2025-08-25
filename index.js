@@ -84,7 +84,7 @@ const aboutDescription = document.getElementById("text-about");
 // Changes the text content for smaller screens
 function makeTextSmalller(){
   if(window.innerWidth <= 600){
-    aboutDescription.textContent = " Hey! I’m a frontend developer, which basically means I make the internet look good. I turn coffee into code, pixels into pages, and bugs into... well, more coffee.";
+    aboutDescription.textContent = "Computer Engineering graduate passionate about web development with HTML, CSS, JavaScript and ICT tools like Microsoft 365, AAD, Intune, Exchange Online, and SharePoint Online. Always eager to learn, build, and contribute.";
   }
 }
 makeTextSmalller();
